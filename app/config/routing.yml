@@ -1,0 +1,9 @@
+#api_io:
+#    resource: "@ApiIOBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+api_io:
+    resource: "@ApiIOBundle/Controller/"
+    type:     annotation
+    defaults: {_format: json}
+    prefix:   /api/
