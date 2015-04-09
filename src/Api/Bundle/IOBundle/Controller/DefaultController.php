@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 use FOS\RestBundle\Controller\FOSRestController;
-
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -25,8 +25,12 @@ class DefaultController extends Controller
     /**
      * @Route("/test", name="test")
      */
-    public function testAction()
+    public function testAction(Request $request)
     {
+
+        //return $_SERVER;
+        //$request = Request::createFromGlobals();
+        return $request;
         $data = array("1" => "sd'dsqd0232éss", "2" => array(), "3");
         return $data;
     }
